@@ -1,7 +1,5 @@
-"use client";
-
 import { usePathname, useSearchParams } from "next/navigation";
-import { Suspense } from "react";
+
 import styles from "./LanguageSwitcher.module.css";
 
 const LanguageSwitcher = ({ containerClassName, optionClassName }) => {
@@ -20,23 +18,21 @@ const LanguageSwitcher = ({ containerClassName, optionClassName }) => {
   };
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <select
-        onChange={changeLanguage}
-        defaultValue={locale}
-        className={`${styles.container} ${containerClassName}`}
-      >
-        {locales.map((loc) => (
-          <option
-            key={loc}
-            value={loc}
-            className={`${styles.option} ${optionClassName}`}
-          >
-            {loc}
-          </option>
-        ))}
-      </select>
-    </Suspense>
+    <select
+      onChange={changeLanguage}
+      defaultValue={locale}
+      className={`${styles.container} ${containerClassName}`}
+    >
+      {locales.map((loc) => (
+        <option
+          key={loc}
+          value={loc}
+          className={`${styles.option} ${optionClassName}`}
+        >
+          {loc}
+        </option>
+      ))}
+    </select>
   );
 };
 
