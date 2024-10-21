@@ -2,7 +2,7 @@
 
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
-import LanguageSwitcher from "./components/LanguageSwitcher";
+import SuspenseLanguageSwitcher from "./components/SuspenseLanguageSwitcher";
 import Image from "next/image";
 import styles from "./page.module.css";
 
@@ -17,9 +17,7 @@ export default function Home() {
           className={`${styles.container} text-background text-center w-2/3`}
         >
           <div className="flex justify-between items-center mb-6">
-            <Suspense fallback={<div>Loading...</div>}>
-              <LanguageSwitcher />
-            </Suspense>
+            <SuspenseLanguageSwitcher />
             <Image
               src="/favicon/Queer Logo.png"
               alt="Queer Montenegro logo"
