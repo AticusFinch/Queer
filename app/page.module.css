@@ -113,6 +113,10 @@
   .head {
     font-size: 3.2rem;
   }
+
+  .switcher-button:hover {
+    animation: none;
+  }
 }
 
 @media (max-width: 840px) {
