@@ -2,8 +2,12 @@
   text-align: left;
 }
 
-.image {
+.logo {
   width: 10%;
+}
+
+.image {
+  width: 100%;
 }
 
 .switcher-container {
@@ -51,7 +55,7 @@
 }
 
 @media (max-width: 1920px) {
-  .image {
+  .logo {
     width: 15%;
   }
 
@@ -97,7 +101,7 @@
 }
 
 @media (max-width: 1280px) {
-  .image {
+  .logo {
     width: 15%;
   }
 }
@@ -106,7 +110,7 @@
 }
 
 @media (max-width: 1024px) {
-  .image {
+  .logo {
     width: 20%;
   }
 
@@ -124,7 +128,7 @@
     text-align: left;
   }
 
-  .image {
+  .logo {
     width: 20%;
   }
 
@@ -148,7 +152,7 @@
 }
 
 @media (max-width: 601px) {
-  .image {
+  .logo {
     width: 25%;
   }
 
@@ -203,7 +207,7 @@
 }
 
 @media (max-width: 320px) {
-  .image {
+  .logo {
     width: 30%;
   }
 
