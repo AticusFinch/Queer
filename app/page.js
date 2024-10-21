@@ -45,7 +45,15 @@ function HomeContent() {
 
 export default function Home() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense
+      fallback={
+        <div
+          className={`${styles.loading} flex items-center justify-center h-screen bg-gradient-to-r from-envy to-cameo`}
+        >
+          <p className={styles.paragraph}>Loading...</p>
+        </div>
+      }
+    >
       <HomeContent />
     </Suspense>
   );
