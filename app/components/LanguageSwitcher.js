@@ -2,37 +2,37 @@ import { usePathname, useSearchParams } from "next/navigation";
 
 import styles from "./LanguageSwitcher.module.css";
 
-const LanguageSwitcher = ({ containerClassName, optionClassName }) => {
+const LanguageSwitcher = ({ containerClassName, buttonClassName }) => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const locale = searchParams.get("locale") || "sr"; // Default to "sr" if locale is not set
 
-  const locales = ["sr", "en"];
+  const locales = [
+    { value: "sr", label: "MNE" },
+    { value: "en", label: "ENG" },
+  ];
 
-  const changeLanguage = (e) => {
-    const newLocale = e.target.value;
+  const changeLanguage = (newLocale) => {
     const newSearchParams = new URLSearchParams(searchParams);
     newSearchParams.set("locale", newLocale);
     const newUrl = `${pathname}?${newSearchParams.toString()}`;
-    window.location.href = newUrl;
+    window.location.href = newUrl; // Navigate to the new URL with the updated locale
   };
 
   return (
-    <select
-      onChange={changeLanguage}
-      defaultValue={locale}
-      className={`${styles.container} ${containerClassName}`}
-    >
-      {locales.map((loc) => (
-        <option
-          key={loc}
-          value={loc}
-          className={`${styles.option} ${optionClassName}`}
+    <div className={`${styles.container} ${containerClassName}`}>
+      {locales.map(({ value, label }) => (
+        <button
+          key={value}
+          onClick={() => changeLanguage(value)}
+          className={`${styles.button} ${buttonClassName} ${
+            locale === value ? styles.active : ""
+          }`}
         >
-          {loc}
-        </option>
+          {label}
+        </button>
       ))}
-    </select>
+    </div>
   );
 };
 
