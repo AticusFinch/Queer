@@ -1,3 +1,7 @@
+.main-container {
+  overflow: hidden;
+}
+
 .container {
   text-align: left;
 }

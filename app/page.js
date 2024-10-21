@@ -12,7 +12,9 @@ function HomeContent() {
   const locale = searchParams.get("locale") || "sr"; // Default to "sr" if locale is not set
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gradient-to-r from-envy to-cameo">
+    <div
+      className={`${styles["main-container"]} flex items-center justify-center h-screen bg-gradient-to-r from-envy to-cameo`}
+    >
       <div className={`${styles.container} text-background text-center w-2/3`}>
         <div
           className={`${styles.extra} flex justify-between items-center mb-6`}
@@ -34,7 +36,7 @@ function HomeContent() {
           <motion.div
             initial={{ x: "100vh" }}
             animate={{ x: 0 }}
-            transition={{ duration: 1.2 }}
+            transition={{ duration: 1.4 }}
           >
             <LanguageSwitcher
               containerClassName={styles["switcher-container"]}
@@ -45,7 +47,7 @@ function HomeContent() {
         <motion.h1
           initial={{ x: "-100vw" }}
           animate={{ x: 0 }}
-          transition={{ duration: 1.5 }}
+          transition={{ duration: 1.4 }}
           className={`${styles.head} text-7xl font-bold uppercase`}
         >
           {locale === "sr"
@@ -55,7 +57,7 @@ function HomeContent() {
         <motion.p
           initial={{ y: "100vh" }}
           animate={{ y: 0 }}
-          transition={{ duration: 1.2 }}
+          transition={{ duration: 1.7 }}
           className={`${styles.paragraph} mt-6 mb-4 text-3xl`}
         >
           {locale === "sr"
@@ -65,7 +67,7 @@ function HomeContent() {
         <motion.p
           initial={{ y: "100vh" }}
           animate={{ y: 0 }}
-          transition={{ duration: 1.5 }}
+          transition={{ duration: 1.9 }}
           className={`${styles.paragraph} text-3xl`}
         >
           {locale === "sr"
