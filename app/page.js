@@ -13,14 +13,19 @@ function HomeContent() {
   return (
     <div className="flex items-center justify-center h-screen bg-gradient-to-r from-envy to-cameo">
       <div className={`${styles.container} text-background text-center w-2/3`}>
-        <div className="flex justify-between items-center mb-6">
-          <LanguageSwitcher />
+        <div
+          className={`${styles.extra} flex justify-between items-center mb-6`}
+        >
           <Image
-            src="/favicon/Queer Logo.png"
+            src="/favicon/QueerWhite@300x.png"
             alt="Queer Montenegro logo"
             width={1202}
             height={413}
             className={styles.image}
+          />
+          <LanguageSwitcher
+            containerClassName={styles["switcher-container"]}
+            buttonClassName={styles["switcher-button"]}
           />
         </div>
         <h1 className={`${styles.head} text-7xl font-bold uppercase`}>

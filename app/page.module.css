@@ -1,10 +1,58 @@
+.container {
+  text-align: left;
+}
+
 .image {
   width: 10%;
 }
 
+.switcher-container {
+  width: 7rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.extra {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.switcher-button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--background);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.switcher-button:hover {
+  animation: jump 0.5s ease-in-out;
+}
+
+.head {
+  margin-top: 3rem;
+  color: var(--font);
+  font-weight: 900;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 1920px) {
   .image {
-    width: 12%;
+    width: 15%;
   }
 
   .paragraph {
@@ -23,6 +71,13 @@
 }
 
 @media (max-width: 1600px) {
+  .switcher-container {
+    width: 8rem;
+  }
+
+  .switcher-button {
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 1540px) {
@@ -31,6 +86,10 @@
 @media (max-width: 1440px) {
   .container {
     width: 80%;
+  }
+
+  .switcher-container {
+    width: 6rem;
   }
 }
 
@@ -47,9 +106,20 @@
 }
 
 @media (max-width: 1024px) {
+  .image {
+    width: 20%;
+  }
+
+  .head {
+    font-size: 3.2rem;
+  }
 }
 
 @media (max-width: 840px) {
+  .container {
+    text-align: left;
+  }
+
   .image {
     width: 20%;
   }
@@ -61,6 +131,10 @@
   .paragraph {
     font-size: 1.3rem;
   }
+
+  .head {
+    margin-top: 1.3rem;
+  }
 }
 
 @media (max-width: 800px) {
@@ -70,6 +144,13 @@
 }
 
 @media (max-width: 601px) {
+  .image {
+    width: 25%;
+  }
+
+  .head {
+    font-size: 3.5rem;
+  }
 }
 
 @media (max-width: 485px) {
@@ -79,9 +160,6 @@
   .container {
     width: 90%;
   }
-  .image {
-    width: 35%;
-  }
 
   .paragraph:first-of-type {
     margin-top: 1rem;
@@ -90,6 +168,18 @@
   .paragraph {
     font-size: 1.1rem;
     line-height: 1.5;
+  }
+
+  .switcher-container {
+    width: 5rem;
+  }
+
+  .switcher-button {
+    font-size: 0.7rem;
+  }
+
+  .paragraph {
+    font-size: 0.85rem;
   }
 }
 
@@ -101,7 +191,7 @@
 
 @media (max-width: 376px) {
   .head {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
   }
 }
 
@@ -109,12 +199,24 @@
 }
 
 @media (max-width: 320px) {
+  .image {
+    width: 30%;
+  }
+
   .head {
-    font-size: 2rem;
+    font-size: 2.3rem;
+  }
+
+  .switcher-button {
+    font-size: 0.6rem;
+  }
+
+  .switcher-container {
+    width: 4rem;
   }
 
   .paragraph {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 
