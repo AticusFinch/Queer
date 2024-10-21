@@ -9,7 +9,9 @@ module.exports = {
     extend: {
       colors: {
         background: "var(--background)",
-        foreground: "var(--foreground)",
+        font: "var(--font)",
+        envy: "var(--element-envy)",
+        cameo: "var(--element-cameo)",
       },
     },
   },

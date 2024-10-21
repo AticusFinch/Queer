@@ -1,0 +1,12 @@
+.container {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--font);
+}
+
+.option {
+  background-color: var(--font);
+  color: var(--background);
+}
