@@ -17,7 +17,9 @@ export default function Home() {
           className={`${styles.container} text-background text-center w-2/3`}
         >
           <div className="flex justify-between items-center mb-6">
-            <LanguageSwitcher />
+            <Suspense fallback={<div>Loading...</div>}>
+              <LanguageSwitcher />
+            </Suspense>
             <Image
               src="/favicon/Queer Logo.png"
               alt="Queer Montenegro logo"
